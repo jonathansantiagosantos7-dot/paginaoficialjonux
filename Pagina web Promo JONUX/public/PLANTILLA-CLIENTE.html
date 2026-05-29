@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+  =======================================================================
+  PLANTILLA DE CONFIGURACION POR CLIENTE
+  =======================================================================
+  Este archivo NO se sube como pagina. Es solo una guia para crear un
+  nuevo catalogo para otro cliente.
+
+  COMO USAR:
+  1. Toma el archivo dist/index.html ya construido (es el catalogo).
+  2. Abrelo con un editor (VS Code, Notepad, etc.).
+  3. Busca al inicio el bloque <script> con window.JONUX_APPSHEET_CONFIG.
+  4. Copia el bloque que esta abajo y pegalo en su lugar.
+  5. Edita los campos con los datos del cliente.
+  6. Guarda el archivo y subelo a su hosting.
+  =======================================================================
+-->
+<script>
+  window.JONUX_APPSHEET_CONFIG = {
+    // -------- DATOS DE APPSHEET --------
+    // App ID que da AppSheet (Settings > Information > App ID).
+    appId: "REEMPLAZA_CON_APP_ID",
+
+    // Access Key generada en AppSheet > Settings > Integrations.
+    accessKey: "REEMPLAZA_CON_ACCESS_KEY",
+
+    // CONTEXT("AppName") de AppSheet. Necesario para que se vean las imagenes.
+    // Si no lo sabes, usa el mismo valor de appId como fallback.
+    appName: "REEMPLAZA_CON_APP_NAME",
+
+    // -------- WHATSAPP DEL CLIENTE --------
+    // Numero internacional SIN "+" ni espacios.
+    // Ej: Guatemala 502 12345678 => "50212345678"
+    // Ej: Mexico 521 5512345678  => "5215512345678"
+    whatsappNumber: "50200000000",
+
+    // -------- MARCA DE LA TIENDA --------
+    // Nombre que aparece en el encabezado y en el mensaje de WhatsApp.
+    storeName: "Mi Tienda",
+
+    // Lema corto debajo del nombre.
+    storeTagline: "Edicion Premium",
+
+    // Titulo grande llamativo del catalogo.
+    storeHeadline: "Calzado a tu Estilo",
+
+    // Iniciales del logo (2 letras). Si lo dejas vacio toma las del storeName.
+    storeLogoText: "MT",
+
+    // -------- OPCIONES TECNICAS --------
+    // Cada cuantos segundos refresca el catalogo (15 a 600).
+    refreshSeconds: 30,
+
+    // Cuantos productos se muestran al inicio. Sale boton "Ver mas".
+    pageSize: 24,
+  };
+</script>
+
+<!--
+  =======================================================================
+  IMAGENES POR PRODUCTO (GALERIA)
+  =======================================================================
+  Cada producto puede tener varias fotos. En la tabla "Productos" puedes
+  agregar mas columnas de imagen, todas opcionales. Soporta cualquiera
+  de estos nombres:
+
+    - Foto del Producto      (imagen principal, ya existe en tu app)
+    - Imagen2  /  Foto2  /  Foto del Producto 2
+    - Imagen3  /  Foto3  /  Foto del Producto 3
+    - Imagen4  /  Foto4
+    - Imagen5  /  Foto5
+    - Imagen6  /  Foto6
+
+  Tambien puedes usar UNA SOLA columna llamada "Galeria" o "Fotos"
+  con varios links separados por coma, salto de linea o punto y coma.
+
+  En la pagina:
+    - La primera foto se ve grande en la tarjeta del producto.
+    - Al abrir "Ver detalles" salen miniaturas para cambiar de foto.
+    - Al tocar la foto grande se abre en pantalla completa con flechas
+      para pasar entre todas las fotos.
+  =======================================================================
+-->
+
